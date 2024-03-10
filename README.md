@@ -1,92 +1,49 @@
 # CSCK503 Machine Learning in Practice
 
+# Emissions Model Project
 
+## Overview
 
-## Getting started
+This project aims to develop machine learning models to predict CO2 emissions and categorize boroughs Low, Medium, or High Emission Areas as well as into emission intensity clusters based on road characteristics and vehicle types.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Data
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The project utilizes a dataset containing information on road characteristics and pollution caused by different types of vehicles. The dataset includes features such as borough name, road length, type of pollutant emitted, and the amount of pollution caused by petrol, diesel, and electric vehicles.
 
-## Add your files
+## Exploratory Data Analysis (EDA)
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Exploratory data analysis was conducted to understand the characteristics of the dataset.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.csc.liv.ac.uk/sgapalam/csck503-machine-learning-in-practice.git
-git branch -M main
-git push -uf origin main
-```
+## Model Building
 
-## Integrate with your tools
+### Regression Model
 
-- [ ] [Set up project integrations](https://gitlab.csc.liv.ac.uk/sgapalam/csck503-machine-learning-in-practice/-/settings/integrations)
+A linear regression model was trained to predict CO2 emissions based on road length and pollution caused by different types of vehicles.
 
-## Collaborate with your team
+### Classification Model
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+A random forest classifier was trained to categorize boroughs into Low, Medium, or High Emission Areas based on their emissions profile.
 
-## Test and Deploy
+### Clustering Model
 
-Use the built-in continuous integration in GitLab.
+A K-Means clustering model was trained to group boroughs into clusters based on pollution caused by different types of vehicles.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Model Evaluation
 
-***
+The performance of each model was assessed using appropriate evaluation metrics. For the regression model, metrics such as ... were used to evaluate .... For the classification model, ... were used to evaluate .... For the clustering model, ... were used to evaluate ....
 
-# Editing this README
+## Conclusion
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+The machine learning models developed in this project provide valuable insights into CO2 emissions patterns and help categorise boroughs based on emission intensity. Further improvements and refinements to the models could be explored in future work.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## References
 
-## Name
-Choose a self-explaining name for your project.
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html) - Documentation for scikit-learn library.
+- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/) - Documentation for Pandas library.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## Contributors
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- [Ibrahim Amr]
+- [Alexandros Arcudis]
+- [Chantal Maskell]
+- [Aleksander Palamarczuk]
