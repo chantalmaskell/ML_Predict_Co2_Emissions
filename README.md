@@ -30,7 +30,7 @@ A K-Means clustering model was trained to group boroughs into clusters based on 
 
 ## Model Evaluation
 
-The performance of each model was assessed using appropriate evaluation metrics. For the regression model, metrics such as ... were used to evaluate .... For the classification model, ... were used to evaluate .... For the clustering model, ... were used to evaluate ....
+The performance of each model was assessed using appropriate evaluation metrics.
 
 ## Conclusion
 
